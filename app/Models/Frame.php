@@ -3,22 +3,29 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Frame extends Model
 {
-    use HasFactory;
-
     protected $fillable = [
+        'event_id',
         'name',
-        'image_url',
-        'is_active',
+        'preview_image',
+        'frame_data',
     ];
 
     protected function casts(): array
     {
         return [
-            'is_active' => 'boolean',
+            'frame_data' => 'array',
         ];
+    }
+
+    /**
+     * Relasi frame dengan event.
+     */
+    public function event(): BelongsTo
+    {
+        return $this->belongsTo(Event::class);
     }
 }

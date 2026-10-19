@@ -3,37 +3,28 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Event extends Model
 {
-    use HasFactory;
-
     protected $fillable = [
-        'user_id',
         'name',
-        'starts_at',
-        'ends_at',
+        'description',
+        'banner_image',
+        'start_date',
+        'end_date',
     ];
 
     protected function casts(): array
     {
         return [
-            'starts_at' => 'datetime',
-            'ends_at' => 'datetime',
+            'start_date' => 'date',
+            'end_date' => 'date',
         ];
     }
 
-    public function user(): BelongsTo
+    public function frames(): HasMany
     {
-        return $this->belongsTo(User::class);
-    }
-
-    public function drafts(): HasMany
-    {
-        return $this->hasMany(Draft::class);
+        return $this->hasMany(Frame::class);
     }
 }
-
