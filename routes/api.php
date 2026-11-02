@@ -2,8 +2,8 @@
 
 use App\Http\Controllers\Api\CustomFrameController;
 use App\Http\Controllers\Api\LayoutController;
-use App\Http\Controllers\FrameController;
-use App\Http\Controllers\EventController;
+use App\Http\Controllers\Api\FrameController;
+use App\Http\Controllers\Api\EventController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
