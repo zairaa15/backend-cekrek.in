@@ -1,12 +1,12 @@
-
 <?php
 
+use App\Http\Controllers\Api\FrameController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\FrameController;
-use App\Http\Controllers\EventController;
+use App\Http\Controllers\Api\EventController;
 
 // Endpoint publik: menampilkan frame
-Route::get('/frames', [FrameController::class, 'index']);
+// Route::get('/frames', [FrameController::class, 'index']);
+Route::get("/frames", [FrameController::class, "index"]);
 Route::get('/frames/{id}', [FrameController::class, 'show']);
 
 // Endpoint pengelolaan frame
