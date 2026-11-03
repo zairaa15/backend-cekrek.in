@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\Api\FrameController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Api\EventController;
+use App\Http\Controllers\FrameController;
+use App\Http\Controllers\EventController;
 
 // Endpoint publik: menampilkan frame
 // Route::get('/frames', [FrameController::class, 'index']);

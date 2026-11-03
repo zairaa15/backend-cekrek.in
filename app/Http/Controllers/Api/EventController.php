@@ -1,6 +1,11 @@
 <?php
 
 namespace App\Http\Controllers\Api;
+<<<<<<< HEAD
+=======
+
+use App\Http\Controllers\Controller;
+>>>>>>> 266647ca97c8d24e17ebc08165fbea23fd22de45
 
 use App\Models\Event;
 use App\Http\Controllers\Controller;
